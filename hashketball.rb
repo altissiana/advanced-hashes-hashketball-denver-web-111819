@@ -181,11 +181,9 @@ def player_stats(name)
   players = home_team + away_team
   players.each do |player|
     if player[:player_name] ==  name
-      #player_copy = player.clone 
-      #player_copy.delete(:player_name)
-      player.delete(:player_name)
-      return player
-      #return player_copy
+      player_copy = player.clone 
+      player_copy.delete(:player_name)
+      return player_copy
     end  
   end
 end  
